@@ -2,7 +2,7 @@ import { Button, Gap } from '../../atoms'
 import { NavLink } from 'react-router-dom';
 
 function PostItem(props) {
-    const { image, alt, name, date, body, onDelete } = props
+    const { image, alt, name, date, body, _id,  onDelete } = props
     
     return (
         <div className="blog-item w-1/2 h-auto rounded overflow-hidden  shadow-md shadow-black ">
@@ -19,7 +19,7 @@ function PostItem(props) {
                 <p className='author m-0 mt-1 text-xs text-gray-600'>{name} - {date}</p>
                 <p className='body m-0 mt-4 text-xl text-gray-700'>{body}</p>
                 <Gap className={'h-4'}/>
-                <NavLink to="/post-detail">
+                <NavLink to={`/post-detail/${_id}`}>
                 <Button>Lihat Detail</Button>
                 </NavLink>
             </div>

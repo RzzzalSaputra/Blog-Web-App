@@ -12,7 +12,7 @@ export const routes = createBrowserRouter([
                 element: <Home/>
             },
             {
-                path: '/post-detail',
+                path: '/post-detail/:id',
                 element: <PostDetail/>
             },
             {
