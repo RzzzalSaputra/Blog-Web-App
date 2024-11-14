@@ -1,23 +1,23 @@
 import { Button, Gap } from '../../atoms'
 
 function PostItem(props) {
-    const { image, alt, name, date, body } = props
+    const { image, alt, name, date, body, onDelete } = props
     
     return (
-        <div className="w-1/2 h-auto rounded overflow-hidden  shadow-2xl shadow-black ">
-            <img src={image} alt={alt} className=" w-full h-52 object-cover"/>
-            <div className="content-detail m-2">
-                <div className="title-wrapper flex justify-between p-1">
-                    <h3 className="title font-semibold text-xl">{alt}</h3>
+        <div className="blog-item w-1/2 h-auto rounded overflow-hidden  shadow-md shadow-black ">
+            <img src={image} alt={alt} className="image-thumb w-full h-52 object-cover "/>
+            <div className="content-detail p-4">
+                <div className="title-wrapper flex justify-between items-center">
+                    <h3 className="title m-0 font-bold text-black text-xl">{alt}</h3>
                     <div className="edit-wrapper flex items-center">
                         <Button>Edit</Button>
                         <Gap className={"w-10"}/>
-                        <Button>Hapus</Button>
+                        <Button onClick={onDelete}>Hapus</Button>
                     </div>
                 </div>
-                <p className='author'>{name} - {date}</p>
+                <p className='author m-0 mt-1 text-xs text-gray-600'>{name} - {date}</p>
                 <Gap className={'h-4'}/>
-                <p className='body'>{body}</p>
+                <p className='body m-0 mt-4 text-xl text-gray-700'>{body}</p>
             </div>
         </div>
     )

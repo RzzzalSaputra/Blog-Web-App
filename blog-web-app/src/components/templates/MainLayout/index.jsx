@@ -5,7 +5,7 @@ function MainLayout(){
     return(
         <div className="Main-App-Wrapper flex flex-col h-screen">
             <Header/>
-            <div className="Content-wrapper max-w-6xl m-auto w-full flex-1">
+            <div className="Content-wrapper max-w-7xl m-auto w-full flex-1">
                 <Outlet/>
             </div>
             <Footer/>
